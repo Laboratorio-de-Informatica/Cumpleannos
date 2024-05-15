@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+    <title>Administrador Miembros ISIS</title>
+    <meta name="description" content="Our first page">
+    <meta name="keywords" content="html tutorial template">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/files.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <style>
+        .button {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .button2 {background-color: #008CBA;} /* Blue */
+        .button3 {background-color: #f44336;} /* Red */
+    </style>
+
+
+</head>
+<body onload="files.prepareElements()">
+    <center><h1>Administrador de datos de los miembros del programa de Ingeniería de Sistemas</h1></center>
+    <br><br><br><br>
+    <center>
+    <label><b>1. Consultar informacion de miembros del programa</b></label>
+        <br><br>
+    <div class="form-row">
+            <button
+                onclick = "app.getAllPersons()"
+                name="getAllPersons">Consultar
+        </button>
+        <br><br><br>
+    </div>
+    </center>
+    <center>
+        <label><b>2. Importar informacion de archivo XLS/XLSX/CSV</b></label>
+    <div class="form-row">
+        <br>
+        <input type="file" id="input-excel" name="myfile">
+    </div>
+        <br>
+        <div>
+            <button  onclick="files.uploadExcelFile()">
+                Importar
+            </button>
+            <button  onclick="files.deleteExcelFile()">
+                Eliminar
+            </button>
+        </div>
+        <br><br><br>
+        <label><b>3. Consultar y limpiar logs</b></label>
+        <br><br>
+        <div>
+            <button onclick="files.cleanLogs()">
+                Limpiar logs
+            </button>
+            <a href="./log.html" onload="location.reload()">Ver Logs</a>
+        </div>
+        <br><br>
+        <label><b>4. Manuales</b></label>
+        <div>
+            <p><a href="./manuales/manual-usuario.pdf"> manual de usuario</a></p>
+            <p><a href="./manuales/manual-tecnico.pdf"> manual tecnico</a></p>
+        </div>
+        <label><b>5. Terminar ejecucion</b></label>
+        <div>
+            <button id="shutdown" class="button button3">
+                Terminar ejecucion
+            </button>
+        </div>
+    </center>
+    <br><br>
+
+    <center>
+    <div id="powered_by">
+        Desarrollado por :
+        Nicolás Aguilera Contreras
+    </div>
+        <a href=https://www.linkedin.com/in/nicol%C3%A1s-aguilera-contreras-3137a01b2/">Linkedin</a>
+    </center>
+
+</body>
+</html>

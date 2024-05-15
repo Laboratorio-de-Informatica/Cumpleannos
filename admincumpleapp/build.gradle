@@ -1,0 +1,41 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.5'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+	id 'java'
+}
+
+group = 'escuelaing'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+bootJar {
+	destinationDirectory = file("$rootDir/someDir")
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-actuator:2.7.5'
+	compileOnly 'org.projectlombok:lombok:1.18.24'
+// https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml
+	implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '5.2.3'
+	implementation group: 'com.github.dreamroute', name: 'excel-helper', version: '1.1-RELEASE'
+	// https://mvnrepository.com/artifact/org.apache.poi/poi
+	implementation group: 'org.apache.poi', name: 'poi', version: '5.2.3'
+	// https://mvnrepository.com/artifact/org.apache.commons/commons-csv
+	implementation group: 'org.apache.commons', name: 'commons-csv', version: '1.9.0'
+	annotationProcessor 'org.projectlombok:lombok:1.18.24'
+	testCompileOnly 'org.projectlombok:lombok:1.18.24'
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.7.5'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.7.5'
+	implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.31'
+	implementation 'org.springframework.boot:spring-boot-starter:2.7.5'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

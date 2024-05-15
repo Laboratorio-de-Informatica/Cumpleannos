@@ -1,0 +1,46 @@
+nov 21, 2022 1:03:25 PM app.models.Log writeLogs
+INFORMACIÓN: 
+Mensajes de la linea: 1
+La persona andrés gomez fue eliminada correctamente
+Mensajes de la linea: 2
+La persona Laura Guardado fue eliminada correctamente
+Mensajes de la linea: 3
+La persona Daniel Ramirez fue eliminada correctamente
+Mensajes de la linea: 4
+ERROR AL ELIMINAR: No fue encontrada la persona Nic Aguilera con el correo nicolas@m
+Mensajes de la linea: 5
+La persona Daniel Contreras fue eliminada correctamente
+Mensajes de la linea: 6
+La persona Felipe Cardona fue eliminada correctamente
+Mensajes de la linea: 7
+La persona Gonzalo Ortiz fue eliminada correctamente
+Mensajes de la linea: 8
+La persona Jorge Arango fue eliminada correctamente
+Mensajes de la linea: 9
+La persona Daniel Gonzales fue eliminada correctamente
+Mensajes de la linea: 10
+La persona Pablo Mata fue eliminada correctamente
+
+nov 21, 2022 1:03:32 PM app.models.Log writeLogs
+INFORMACIÓN: 
+Mensajes de la linea: 1
+ERROR AL ELIMINAR: No fue encontrada la persona andrés gomez con el correo andres@gmail.com
+Mensajes de la linea: 2
+ERROR AL ELIMINAR: No fue encontrada la persona Laura Guardado con el correo laura@gmail.com
+Mensajes de la linea: 3
+ERROR AL ELIMINAR: No fue encontrada la persona Daniel Ramirez con el correo carlos@gmail.com
+Mensajes de la linea: 4
+ERROR AL ELIMINAR: No fue encontrada la persona Nic Aguilera con el correo nicolas@m
+Mensajes de la linea: 5
+ERROR AL ELIMINAR: No fue encontrada la persona Daniel Contreras con el correo daniel@gmail.com
+Mensajes de la linea: 6
+ERROR AL ELIMINAR: No fue encontrada la persona Felipe Cardona con el correo felipep@gmail.com
+Mensajes de la linea: 7
+ERROR AL ELIMINAR: No fue encontrada la persona Gonzalo Ortiz con el correo gonzalo@gmail.com
+Mensajes de la linea: 8
+ERROR AL ELIMINAR: No fue encontrada la persona Jorge Arango con el correo jorge@gmail.com
+Mensajes de la linea: 9
+ERROR AL ELIMINAR: No fue encontrada la persona Daniel Gonzales con el correo danielp@gmail.com
+Mensajes de la linea: 10
+ERROR AL ELIMINAR: No fue encontrada la persona Pablo Mata con el correo pablo@gmail.com
+

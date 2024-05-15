@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="js/profile.js"></script>
+
+
+
+</head>
+<body onload="profile.loadData()">
+<div class="container rounded bg-white mt-5 mb-5">
+    <div class="row">
+        <center><div class="col-md-3 border-right">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4 class="text-right">Editar perfil</h4>
+            </div>
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                <img id="blobpng-image" class="rounded-circle mt-5" width="150px"><img/>
+            </div>
+            <br>
+        </div><center/>
+        <center><div class="col-md-5 border-right">
+            <div class="p-3 py-5">
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                    <input id="input-newfoto" name="filename" type="file" accept="image/png, image/jpg, image/tif">
+                    </div>
+                    <br>
+                    <div class="col-md-6"><label class="labels">Nombre </label><input id="profile-nombre" type="text" class="form-control" placeholder="nombre" value=""></div>
+                    <br>
+                    <div class="col-md-6"><label class="labels">Apellido </label><input id="profile-apellido" type="text" class="form-control" value="" placeholder="apellido"></div>
+                    <br>
+                    <div class="col-md-12"><label class="labels">Dia </label><input id="profile-dia" type="text" class="form-control" placeholder="Dia" value=""></div>
+                    <br>
+                    <div class="col-md-12"><label class="labels">Mes </label><input id="profile-mes" type="text" class="form-control" placeholder="Mes" value=""></div>
+                    <br>
+                    <div class="col-md-12">
+                        <label for="perfil">Perfil</label>
+                        <select name="perfil" id="perfil" onchange="profile.validateSelect()">
+                            <option value="Graduado">Graduado</option>
+                            <option value="Estudiante">Estudiante</option>
+                            <option value="Directivo">Directivo</option>
+                            <option value="Profesor">Profesor</option>
+                            <option value="ProfesorC">ProfesorC</option>
+                            <option value="ProfesorM">ProfesorM</option>
+                            <option value="Administrador">Administrador</option>
+                            <option value="UApoyo">UApoyo</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                        <input id="perfil-otro" type="text" class="form-control" placeholder="Si es otro escriba cual" readonly="readonly"></div>
+                    </div>
+                    <br>
+                    <div class="col-md-12"><label class="labels">Correo </label><input id="profile-correo" type="text" class="form-control" placeholder="Correo" value=""></div>
+                    <br>
+                    <div class="col-md-12"><label class="labels">Observacion </label><input id="profile-observacion" type="text" class="form-control" placeholder="Observacion" value=""></div>
+                    <br>
+                    <div class="col-md-12"><label class="labels">Linkedin </label><input id="profile-linkedin" type="text" class="form-control" placeholder="Linkedin" value=""></div>
+                    <br>
+                    <div class="col-md-12"><label class="labels">ID </label><input id="profile-id" type="text" class="form-control" placeholder="id" value=""></div>
+                    <br>
+                </div>
+                <div class="mt-5 text-center"><button onclick="profile.saveProfile()" id ="save-profile" class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+                <br>
+                <div class="mt-5 text-center"><button onclick="location.href = 'http://localhost:8080/persons.html'" id ="return-persons" class="btn btn-primary profile-button" type="button">Volver</button></div>
+
+            </div>
+        </div>
+        </center>
+    </div>
+</div>
+</body>
+</html>

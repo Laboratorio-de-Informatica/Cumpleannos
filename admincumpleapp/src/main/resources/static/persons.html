@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+    <title>Administrador ISIS</title>
+
+    <meta name="description" content="Our first page">
+    <meta name="keywords" content="html tutorial template">
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+    <script type="text/javascript" src="js/persons.js"></script>
+    <script type="text/javascript" src="js/apiclient.js"></script>
+    <script type="text/javascript" src="js/filter.js"></script>
+    <script type="text/javascript" src="js/files.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+
+</head>
+<body onload="persons.getPersons()">
+    <div id="data-table">
+
+        <table id="html-data-table">
+
+            <thead class="thead-dark">
+            <tr>
+                <button id="btnExport" onclick="files.exportReportToExcel()">exportar como xlsx</button>
+                <button id="backtomain" onclick="location.href='http://localhost:8080/'"> Volver</button>
+                <button id="deleteallbutton">Eliminar todos</button>
+                <br><br>
+                <label for="foto">Con foto:</label>
+                <select onchange ="filter.doFilter()" name="foto" id="foto">
+                    <option value="todos">mostrar todos</option>
+                    <option value="si">mostrar solo con foto</option>
+                    <option value="no">mostrar sin foto</option>
+                </select>
+
+                <th><input id="carnet" type="text" onkeyup="filter.doFilter()" placeholder="carnet"></th>
+                <th><input id="nombre" type="text" onkeyup="filter.doFilter()" placeholder="nombre"></th>
+                <th><input id="apellido" type="text" onkeyup="filter.doFilter()" placeholder="apellido"></th>
+                <th><input id="dia"  size="5" type="text" onkeyup="filter.doFilter()" placeholder="dia"></th>
+                <th><input id="mes"  size="5" type="text" onkeyup="filter.doFilter()" placeholder="mes"></th>
+                <th><input id="correo" type="text" onkeyup="filter.doFilter()" placeholder="correo"></th>
+                <th><input id="perfil" type="text" onkeyup="filter.doFilter()" placeholder="perfil"></th>
+                <th><input id="observacion" type="text" onkeyup="filter.doFilter()" placeholder="observacion"></th>
+            </tr>
+
+            </thead>
+
+            <tbody id="table_body">
+
+            </tbody>
+
+        </table>
+
+    </div>
+</body>
+</html>
